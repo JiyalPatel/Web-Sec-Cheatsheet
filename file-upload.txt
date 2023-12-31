@@ -1,5 +1,10 @@
 Tool : weevely  -- https://github.com/epinna/weevely3
-Protection  : https://github.com/digininja/DVWA/blob/master/vulnerabilities/upload/source/impossible.php
+Protection Code  -- https://github.com/digininja/DVWA/blob/master/vulnerabilities/upload/source/impossible.php
+Protection Techniques:
+-- Never allow users to upload executables (php, exe ...etc)
+-- Check the file type AND the file extension.
+-- Analyse the uploaded file itself, recreate it and rename it
+
 
 upload.php			---	try to upload a simple php file
 upload.php.jpeg 		--- 	To bypass the blacklist.
@@ -17,6 +22,7 @@ NOTE:	If you are not able to execute the .PHP file upload new .htaccess file in 
 
 
 setHandler Method [.htaccess]
+------------------------------
 <FilesMatch "_php.gif">
 SetHandler application/x-httpd-php
 </FilesMatch>
@@ -24,4 +30,5 @@ SetHandler application/x-httpd-php
 
 
 AddType Method [.htaccess]
+---------------------------
 AddType application/x-httpd-php .lol
